@@ -1,2 +1,0 @@
-0.2.0 (1/19/16):
-  + Wolves can not be lit on fire
