@@ -1,5 +1,5 @@
-name: WolfPlus
-version: 0.2.0
-description: Tweaks wolf behavior
+name: PetsPlus
+version: 0.0.1
+description: Tweaks pet behavior
 author: acomputerdog
-main: net.acomputerdog.wolfplus.PluginWolfPlus
+main: net.acomputerdog.petplus.PluginPetPlus

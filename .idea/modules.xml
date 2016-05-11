@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WolfPlus.iml" filepath="$PROJECT_DIR$/WolfPlus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PetPlus.iml" filepath="$PROJECT_DIR$/PetPlus.iml" />
     </modules>
   </component>
 </project>
