@@ -10,6 +10,8 @@ import org.bukkit.event.entity.EntitySpawnEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.List;
+
 public class PluginPetPlus extends JavaPlugin implements Listener {
 
     private Player lastWolfBreeder;
@@ -131,18 +133,20 @@ public class PluginPetPlus extends JavaPlugin implements Listener {
      */
     private void onHorseHurt(EntityDamageEvent e) {
         Horse horse = (Horse)e.getEntity();
-        Entity passenger = horse.getPassenger();
-        if (passenger instanceof Player) {
-            if (e instanceof EntityDamageByEntityEvent) {
-                EntityDamageByEntityEvent e2 = (EntityDamageByEntityEvent) e;
-                if (e2.getDamager() instanceof Arrow) {
-                    Arrow arrow = (Arrow)e2.getDamager();
-                    if (arrow.getShooter() == passenger) {
-                        e.setCancelled(true);
+        List<Entity> passengers = horse.getPassengers();
+        for (Entity passenger : passengers) {
+            if (passenger instanceof Player) {
+                if (e instanceof EntityDamageByEntityEvent) {
+                    EntityDamageByEntityEvent e2 = (EntityDamageByEntityEvent) e;
+                    if (e2.getDamager() instanceof Arrow) {
+                        Arrow arrow = (Arrow) e2.getDamager();
+                        if (arrow.getShooter() == passenger) {
+                            e.setCancelled(true);
+                        }
                     }
+                } else if (e.getCause() == EntityDamageEvent.DamageCause.FIRE || e.getCause() == EntityDamageEvent.DamageCause.FIRE_TICK) {
+                    e.setCancelled(true);
                 }
-            } else if (e.getCause() == EntityDamageEvent.DamageCause.FIRE || e.getCause() == EntityDamageEvent.DamageCause.FIRE_TICK) {
-                e.setCancelled(true);
             }
         }
     }
