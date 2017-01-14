@@ -1,5 +1,5 @@
 name: PetsPlus
-version: 0.0.1
+version: 0.1.0
 description: Tweaks pet behavior
 author: acomputerdog
 main: net.acomputerdog.petplus.PluginPetPlus
