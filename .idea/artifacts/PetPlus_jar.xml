@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="PetPlus:jar">
-    <output-path>$PROJECT_DIR$/out</output-path>
-    <root id="archive" name="PetPlus.jar">
-      <element id="module-output" name="PetPlus" />
-      <element id="file-copy" path="$PROJECT_DIR$/LICENSE" />
-    </root>
-  </artifact>
-</component>
