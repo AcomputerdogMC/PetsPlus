@@ -12,6 +12,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.List;
 
+/**
+ * Plugin main class
+ */
 public class PluginPetPlus extends JavaPlugin implements Listener {
 
     private Player lastWolfBreeder;
