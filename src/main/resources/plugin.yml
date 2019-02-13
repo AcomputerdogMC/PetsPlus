@@ -3,3 +3,4 @@ version: ${version}
 description: Tweaks pet behavior
 author: acomputerdog
 main: net.acomputerdog.petplus.PluginPetPlus
+api-version: 1.13
