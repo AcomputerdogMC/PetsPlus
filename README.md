@@ -1,5 +1,5 @@
 # PetsPlus - Bukkit plugin to protect pets from accidental harm
----
+
 Pets is a very simple bukkit plugin that protects tamed pets.  It has the following features:
 
 * Wolves can only be hit by their owner if they are sitting
